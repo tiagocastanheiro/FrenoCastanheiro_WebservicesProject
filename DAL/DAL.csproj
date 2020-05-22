@@ -62,9 +62,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountDB.cs" />
+    <Compile Include="FacultyTransactionDB.cs" />
     <Compile Include="IAccountDB.cs" />
-    <Compile Include="IPaymentDatabaseTransactionDB.cs" />
-    <Compile Include="PaymentDatabaseTransactionDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
