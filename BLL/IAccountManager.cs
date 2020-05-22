@@ -9,8 +9,8 @@ namespace BLL
 {
     public interface IAccountManager
     {
-        Account GetAccountById(int id);
+        Account GetAccountByUID(int UID);
 
-        Account GetAccountByUsername(String username);
+        Account GetAccountByUsername(string username);
     }
 }

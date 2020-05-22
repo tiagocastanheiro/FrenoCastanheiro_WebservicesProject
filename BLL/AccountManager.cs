@@ -17,9 +17,9 @@ namespace BLL
         {
             AccountDb = accountDb;
         }
-        public Account GetAccountById(int id)
+        public Account GetAccountByUID(int id)
         {
-            return AccountDb.GetAccountById(id);
+            return AccountDb.GetAccountByUID(id);
         }
 
         public Account GetAccountByUsername(string username)

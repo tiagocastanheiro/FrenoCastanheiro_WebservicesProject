@@ -9,9 +9,9 @@ namespace DAL
 {
     public interface IAccountDB
     {
-        Account GetAccountById(int id);
+        Account GetAccountByUID(int UID);
 
-        Account GetAccountByUsername(String username);
+        Account GetAccountByUsername(string username);
     }
 
 }

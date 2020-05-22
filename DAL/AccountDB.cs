@@ -15,10 +15,10 @@ namespace DAL
         private string connectionString = null;
         public AccountDB()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["DemoDB"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["StudentsDB"].ConnectionString;
         }
 
-        public Account GetAccountById(int id)
+        public Account GetAccountByUID(int UID)
         {
             Account result = null;
 
@@ -28,7 +28,7 @@ namespace DAL
                 {
                     string query = "SELECT * FROM Accounts where IdAccount = @id";
                     SqlCommand cmd = new SqlCommand(query, cn);
-                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@UID", UID);
                     cn.Open();
 
                     using (SqlDataReader dr = cmd.ExecuteReader())
