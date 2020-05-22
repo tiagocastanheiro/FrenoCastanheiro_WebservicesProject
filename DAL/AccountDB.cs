@@ -11,6 +11,7 @@ namespace DAL
 {
     public class AccountDB : IAccountDB
     {
+
         private string connectionString = null;
         public AccountDB()
         {
