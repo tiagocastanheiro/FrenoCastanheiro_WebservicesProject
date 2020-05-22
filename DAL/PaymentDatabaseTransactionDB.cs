@@ -1,33 +1,38 @@
 ﻿using DTO;
-using Microsoft.Extensions.Configuration;
 using System;
+using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DAL
 {
     public class PaymentDatabaseTransactionDB : IPaymentDatabaseTransactionDB
     {
         private string connectionString = null;
-    public PaymentDatabaseTransactionDB(IConfiguration configuration)
-    {
-        var config = configuration;
-        connectionString = config.GetConnectionString("DefaultConnection");
-    }
-    
-        public PaymentDatabaseTransaction AddTransaction(PaymentDatabaseTransaction pdt)
+        public PaymentDatabaseTransactionDB()
+        {
+            connectionString = ConfigurationManager.ConnectionStrings["StudentsDB"].ConnectionString;
+        }
+
+        public PaymentDatabaseTransaction AddPaymentDatabaseTransaction(PaymentDatabaseTransaction paymentDatabaseTransaction)
         {
             try
             {
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
-                    string query = "INSERT INTO PaymentDatabaseTransactions(Id, UID, Amount, Date) VALUES(@Id, @UID, @Amount, @Date); SELECT SCOPE_IDENTITY()";
+                    string query = "Insert into PaymentDatabaseTransactions(Id, UID, Amount, Date) values(@Id, @UID, @Amount, @Date);SELECT SCOPE_IDENTITY();";
                     SqlCommand cmd = new SqlCommand(query, cn);
-                    cmd.Parameters.AddWithValue("@Id", pdt.Id);
-                    cmd.Parameters.AddWithValue("@UID", pdt.UID);
-                    cmd.Parameters.AddWithValue("@Amount", pdt.Amount);
-                    cmd.Parameters.AddWithValue("@Date", pdt.Date);
+                    cmd.Parameters.AddWithValue("@Id", paymentDatabaseTransaction.Id);
+                    cmd.Parameters.AddWithValue("@UID", paymentDatabaseTransaction.UID);
+                    cmd.Parameters.AddWithValue("@Date", paymentDatabaseTransaction.Date);
+                    cmd.Parameters.AddWithValue("@Amount", paymentDatabaseTransaction.Amount);
 
                     cn.Open();
+
+                    paymentDatabaseTransaction.Id = Convert.ToInt32(cmd.ExecuteScalar());
 
                 }
             }
@@ -36,8 +41,8 @@ namespace DAL
                 throw e;
             }
 
-            return pdt;
+            return paymentDatabaseTransaction;
         }
     }
-    
 }
+
