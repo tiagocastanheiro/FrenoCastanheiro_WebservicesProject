@@ -67,9 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\StudentsDB.mdf" />
+    <Content Include="App_Data\StudentsDB.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\StudentsDB_log.ldf">
       <DependentUpon>StudentsDB.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Web.config" />
   </ItemGroup>
