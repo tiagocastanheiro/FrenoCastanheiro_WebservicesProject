@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountDB.cs" />
+    <Compile Include="FacultyTransactionDB.cs" />
     <Compile Include="IAccountDB.cs" />
+    <Compile Include="IFacultyTransactionDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
