@@ -46,7 +46,7 @@
     <Compile Include="PaymentDatabaseTransaction.cs" />
     <Compile Include="PayOnlineTransaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SAPHR.cs" />
+    <Compile Include="Student.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
