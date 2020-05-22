@@ -65,8 +65,10 @@
     <Compile Include="FacultyTransactionDB.cs" />
     <Compile Include="IAccountDB.cs" />
     <Compile Include="IFacultyTransactionDB.cs" />
+    <Compile Include="IPaymentDatabaseTransaction.cs" />
     <Compile Include="IPayOnlineTransactionDB.cs" />
     <Compile Include="ISAPHRDB.cs" />
+    <Compile Include="PaymentDatabaseTransactionDB.cs" />
     <Compile Include="PayOnlineTransactionDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SAPHRDB.cs" />
