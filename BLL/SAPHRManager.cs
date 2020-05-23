@@ -9,9 +9,9 @@ namespace BLL
 {
     public class SAPHRManager : ISAPHRManager
     {
-        private SAPHRDB SAPHRDB { get; }
+        private ISAPHRDB SAPHRDB { get; }
 
-        public SAPHRManager(SAPHRDB SAPHRDB)
+        public SAPHRManager(ISAPHRDB SAPHRDB)
         {
             this.SAPHRDB = SAPHRDB;
         }

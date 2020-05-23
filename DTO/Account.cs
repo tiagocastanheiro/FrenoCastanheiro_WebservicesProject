@@ -8,8 +8,7 @@ namespace DTO
 {
     public class Account
     {
-        public int IdAccount { get; set; }
         public string Username { get; set; }
-        public int Amount { get; set; }
+        public decimal Amount { get; set; }
     }
 }

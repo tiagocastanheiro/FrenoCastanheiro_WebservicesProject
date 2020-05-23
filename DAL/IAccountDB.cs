@@ -12,6 +12,9 @@ namespace DAL
         Account GetAccountByUID(int UID);
 
         Account GetAccountByUsername(string username);
+
+        int UpdateAccount(Account account);
+
     }
 
 }

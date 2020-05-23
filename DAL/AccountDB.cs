@@ -37,9 +37,8 @@ namespace DAL
                         {
                             result = new Account();
 
-                            result.IdAccount = (int)dr["IdAccount"];
                             result.Username = (string)dr["Username"];
-                            result.Amount = (int)dr["Amount"];
+                            result.Amount = (decimal)dr["Amount"];
                         }
                     }
                 }
@@ -71,11 +70,37 @@ namespace DAL
                         {
                             result = new Account();
 
-                            result.IdAccount = (int)dr["IdAccount"];
                             result.Username = (string)dr["Username"];
-                            result.Amount = (int)dr["Amount"];
+                            result.Amount = (decimal)dr["Amount"];
                         }
                     }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+            return result;
+        }
+
+        public int UpdateAccount(Account account)
+        {
+            int result = 0;
+
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE Accounts SET Amount=@Amount WHERE Username=@Username";
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.AddWithValue("@Username", account.Username);
+                    cmd.Parameters.AddWithValue("@Amount", account.Amount);
+
+                    cn.Open();
+
+                    result = cmd.ExecuteNonQuery();
+                    
                 }
             }
             catch (Exception e)

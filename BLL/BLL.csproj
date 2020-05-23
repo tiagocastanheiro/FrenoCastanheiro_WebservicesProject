@@ -42,12 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountManager.cs" />
-    <Compile Include="FacultyTransactionManager.cs" />
     <Compile Include="IAccountManager.cs" />
-    <Compile Include="IFacultyTransactionManager.cs" />
-    <Compile Include="IPayOnlineTransactionManager.cs" />
+    <Compile Include="IProductsManager.cs" />
     <Compile Include="ISAPHRManager.cs" />
-    <Compile Include="PayOnlineTransactionManager.cs" />
+    <Compile Include="ProductsManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SAPHRManager.cs" />
   </ItemGroup>
@@ -60,9 +58,6 @@
       <Project>{EBBE8364-7FAA-4B67-8680-CFA7EA308618}</Project>
       <Name>DTO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

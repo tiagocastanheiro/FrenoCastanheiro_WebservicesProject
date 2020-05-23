@@ -4,14 +4,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrenoCastanheiro_WebservicesProject", "FrenoCastanheiro_WebservicesProject\FrenoCastanheiro_WebservicesProject.csproj", "{6B0CD51A-CF59-4ED6-BA71-A4D5561821DC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServicePrintPayment", "WcfServicePrintPayment\WcfServicePrintPayment.csproj", "{D3A9AFF1-EB21-44D2-9572-5B3FACEB80E3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{10182976-D4ED-43E1-BC25-829E182D4B41} = {10182976-D4ED-43E1-BC25-829E182D4B41}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{C9EDDB69-E092-4F37-8CAB-CFF70D7BB2B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{EBBE8364-7FAA-4B67-8680-CFA7EA308618}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{6ECC02FB-BB48-4AA2-9A72-918FB6D002DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceMSSQL", "WcfServiceMSSQL\WcfServiceMSSQL.csproj", "{10182976-D4ED-43E1-BC25-829E182D4B41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +26,6 @@ Global
 		{6B0CD51A-CF59-4ED6-BA71-A4D5561821DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B0CD51A-CF59-4ED6-BA71-A4D5561821DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B0CD51A-CF59-4ED6-BA71-A4D5561821DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D3A9AFF1-EB21-44D2-9572-5B3FACEB80E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3A9AFF1-EB21-44D2-9572-5B3FACEB80E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3A9AFF1-EB21-44D2-9572-5B3FACEB80E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3A9AFF1-EB21-44D2-9572-5B3FACEB80E3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C9EDDB69-E092-4F37-8CAB-CFF70D7BB2B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C9EDDB69-E092-4F37-8CAB-CFF70D7BB2B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9EDDB69-E092-4F37-8CAB-CFF70D7BB2B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +38,10 @@ Global
 		{6ECC02FB-BB48-4AA2-9A72-918FB6D002DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6ECC02FB-BB48-4AA2-9A72-918FB6D002DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6ECC02FB-BB48-4AA2-9A72-918FB6D002DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10182976-D4ED-43E1-BC25-829E182D4B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10182976-D4ED-43E1-BC25-829E182D4B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10182976-D4ED-43E1-BC25-829E182D4B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10182976-D4ED-43E1-BC25-829E182D4B41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
