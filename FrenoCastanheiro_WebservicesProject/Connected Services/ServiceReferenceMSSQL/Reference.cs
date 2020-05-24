@@ -9,7 +9,70 @@
 //------------------------------------------------------------------------------
 
 namespace FrenoCastanheiro_WebservicesProject.ServiceReferenceMSSQL {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Account", Namespace="http://schemas.datacontract.org/2004/07/DTO")]
+    [System.SerializableAttribute()]
+    public partial class Account : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal AmountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsernameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Amount {
+            get {
+                return this.AmountField;
+            }
+            set {
+                if ((this.AmountField.Equals(value) != true)) {
+                    this.AmountField = value;
+                    this.RaisePropertyChanged("Amount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Username {
+            get {
+                return this.UsernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
+                    this.UsernameField = value;
+                    this.RaisePropertyChanged("Username");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReferenceMSSQL.IMSSQLService")]
@@ -33,17 +96,17 @@ namespace FrenoCastanheiro_WebservicesProject.ServiceReferenceMSSQL {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMSSQLService/Consume", ReplyAction="http://tempuri.org/IMSSQLService/ConsumeResponse")]
         System.Threading.Tasks.Task<bool> ConsumeAsync(string username, string product, int quantity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMSSQLService/DisplayAmountByUsername", ReplyAction="http://tempuri.org/IMSSQLService/DisplayAmountByUsernameResponse")]
-        decimal DisplayAmountByUsername(string username);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMSSQLService/DisplayAccountByUsername", ReplyAction="http://tempuri.org/IMSSQLService/DisplayAccountByUsernameResponse")]
+        FrenoCastanheiro_WebservicesProject.ServiceReferenceMSSQL.Account DisplayAccountByUsername(string username);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMSSQLService/DisplayAmountByUsername", ReplyAction="http://tempuri.org/IMSSQLService/DisplayAmountByUsernameResponse")]
-        System.Threading.Tasks.Task<decimal> DisplayAmountByUsernameAsync(string username);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMSSQLService/DisplayAccountByUsername", ReplyAction="http://tempuri.org/IMSSQLService/DisplayAccountByUsernameResponse")]
+        System.Threading.Tasks.Task<FrenoCastanheiro_WebservicesProject.ServiceReferenceMSSQL.Account> DisplayAccountByUsernameAsync(string username);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMSSQLService/DisplayAmountByUID", ReplyAction="http://tempuri.org/IMSSQLService/DisplayAmountByUIDResponse")]
-        decimal DisplayAmountByUID(int UID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMSSQLService/DisplayAccountByUID", ReplyAction="http://tempuri.org/IMSSQLService/DisplayAccountByUIDResponse")]
+        FrenoCastanheiro_WebservicesProject.ServiceReferenceMSSQL.Account DisplayAccountByUID(int UID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMSSQLService/DisplayAmountByUID", ReplyAction="http://tempuri.org/IMSSQLService/DisplayAmountByUIDResponse")]
-        System.Threading.Tasks.Task<decimal> DisplayAmountByUIDAsync(int UID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMSSQLService/DisplayAccountByUID", ReplyAction="http://tempuri.org/IMSSQLService/DisplayAccountByUIDResponse")]
+        System.Threading.Tasks.Task<FrenoCastanheiro_WebservicesProject.ServiceReferenceMSSQL.Account> DisplayAccountByUIDAsync(int UID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -97,20 +160,20 @@ namespace FrenoCastanheiro_WebservicesProject.ServiceReferenceMSSQL {
             return base.Channel.ConsumeAsync(username, product, quantity);
         }
         
-        public decimal DisplayAmountByUsername(string username) {
-            return base.Channel.DisplayAmountByUsername(username);
+        public FrenoCastanheiro_WebservicesProject.ServiceReferenceMSSQL.Account DisplayAccountByUsername(string username) {
+            return base.Channel.DisplayAccountByUsername(username);
         }
         
-        public System.Threading.Tasks.Task<decimal> DisplayAmountByUsernameAsync(string username) {
-            return base.Channel.DisplayAmountByUsernameAsync(username);
+        public System.Threading.Tasks.Task<FrenoCastanheiro_WebservicesProject.ServiceReferenceMSSQL.Account> DisplayAccountByUsernameAsync(string username) {
+            return base.Channel.DisplayAccountByUsernameAsync(username);
         }
         
-        public decimal DisplayAmountByUID(int UID) {
-            return base.Channel.DisplayAmountByUID(UID);
+        public FrenoCastanheiro_WebservicesProject.ServiceReferenceMSSQL.Account DisplayAccountByUID(int UID) {
+            return base.Channel.DisplayAccountByUID(UID);
         }
         
-        public System.Threading.Tasks.Task<decimal> DisplayAmountByUIDAsync(int UID) {
-            return base.Channel.DisplayAmountByUIDAsync(UID);
+        public System.Threading.Tasks.Task<FrenoCastanheiro_WebservicesProject.ServiceReferenceMSSQL.Account> DisplayAccountByUIDAsync(int UID) {
+            return base.Channel.DisplayAccountByUIDAsync(UID);
         }
     }
 }

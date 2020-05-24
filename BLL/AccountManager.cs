@@ -24,6 +24,11 @@ namespace BLL
 
             string username = sAPHRManager.GetUsernameByUID(UID);
 
+            if (username == null)
+            {
+                return null;
+            }
+
             return GetAccountByUsername(username);
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -21,9 +22,9 @@ namespace WcfServiceMSSQL
         bool Consume(string username, string product, int quantity);
 
         [OperationContract]
-        decimal DisplayAmountByUsername(string username);
+        Account DisplayAccountByUsername(string username);
 
         [OperationContract]
-        decimal DisplayAmountByUID(int UID);
+        Account DisplayAccountByUID(int UID);
     }
 }

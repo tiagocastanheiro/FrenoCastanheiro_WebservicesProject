@@ -18,7 +18,12 @@ namespace BLL
 
         public string GetUsernameByUID(int UID)
         {
-            return SAPHRDB.GetStudentByUID(UID).Username;
+            var student = SAPHRDB.GetStudentByUID(UID);
+            if (student == null)
+            {
+                return null;
+            }
+            return student.Username;
         }
 
         public int GetUIDbyCardID(int CardUID)

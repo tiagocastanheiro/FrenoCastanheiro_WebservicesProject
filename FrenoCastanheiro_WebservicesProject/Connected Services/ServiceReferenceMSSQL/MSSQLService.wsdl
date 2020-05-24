@@ -4,6 +4,7 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:59640/MSSQLService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:59640/MSSQLService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:59640/MSSQLService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DTO" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IMSSQLService_LoadWithUsername_InputMessage">
@@ -24,17 +25,17 @@
   <wsdl:message name="IMSSQLService_Consume_OutputMessage">
     <wsdl:part name="parameters" element="tns:ConsumeResponse" />
   </wsdl:message>
-  <wsdl:message name="IMSSQLService_DisplayAmountByUsername_InputMessage">
-    <wsdl:part name="parameters" element="tns:DisplayAmountByUsername" />
+  <wsdl:message name="IMSSQLService_DisplayAccountByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayAccountByUsername" />
   </wsdl:message>
-  <wsdl:message name="IMSSQLService_DisplayAmountByUsername_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DisplayAmountByUsernameResponse" />
+  <wsdl:message name="IMSSQLService_DisplayAccountByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayAccountByUsernameResponse" />
   </wsdl:message>
-  <wsdl:message name="IMSSQLService_DisplayAmountByUID_InputMessage">
-    <wsdl:part name="parameters" element="tns:DisplayAmountByUID" />
+  <wsdl:message name="IMSSQLService_DisplayAccountByUID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayAccountByUID" />
   </wsdl:message>
-  <wsdl:message name="IMSSQLService_DisplayAmountByUID_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DisplayAmountByUIDResponse" />
+  <wsdl:message name="IMSSQLService_DisplayAccountByUID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayAccountByUIDResponse" />
   </wsdl:message>
   <wsdl:portType name="IMSSQLService">
     <wsdl:operation name="LoadWithUsername">
@@ -49,13 +50,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IMSSQLService/Consume" message="tns:IMSSQLService_Consume_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMSSQLService/ConsumeResponse" message="tns:IMSSQLService_Consume_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="DisplayAmountByUsername">
-      <wsdl:input wsaw:Action="http://tempuri.org/IMSSQLService/DisplayAmountByUsername" message="tns:IMSSQLService_DisplayAmountByUsername_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IMSSQLService/DisplayAmountByUsernameResponse" message="tns:IMSSQLService_DisplayAmountByUsername_OutputMessage" />
+    <wsdl:operation name="DisplayAccountByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMSSQLService/DisplayAccountByUsername" message="tns:IMSSQLService_DisplayAccountByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMSSQLService/DisplayAccountByUsernameResponse" message="tns:IMSSQLService_DisplayAccountByUsername_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="DisplayAmountByUID">
-      <wsdl:input wsaw:Action="http://tempuri.org/IMSSQLService/DisplayAmountByUID" message="tns:IMSSQLService_DisplayAmountByUID_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IMSSQLService/DisplayAmountByUIDResponse" message="tns:IMSSQLService_DisplayAmountByUID_OutputMessage" />
+    <wsdl:operation name="DisplayAccountByUID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMSSQLService/DisplayAccountByUID" message="tns:IMSSQLService_DisplayAccountByUID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMSSQLService/DisplayAccountByUIDResponse" message="tns:IMSSQLService_DisplayAccountByUID_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IMSSQLService" type="tns:IMSSQLService">
@@ -87,8 +88,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DisplayAmountByUsername">
-      <soap:operation soapAction="http://tempuri.org/IMSSQLService/DisplayAmountByUsername" style="document" />
+    <wsdl:operation name="DisplayAccountByUsername">
+      <soap:operation soapAction="http://tempuri.org/IMSSQLService/DisplayAccountByUsername" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -96,8 +97,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DisplayAmountByUID">
-      <soap:operation soapAction="http://tempuri.org/IMSSQLService/DisplayAmountByUID" style="document" />
+    <wsdl:operation name="DisplayAccountByUID">
+      <soap:operation soapAction="http://tempuri.org/IMSSQLService/DisplayAccountByUID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

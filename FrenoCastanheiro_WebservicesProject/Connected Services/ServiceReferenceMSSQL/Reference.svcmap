@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a5ec4555-7247-464f-a7eb-36fc35c34d17" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4b79d75a-b6c0-4057-9027-f8ab356ad8ff" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,11 @@
     <MetadataSource Address="http://localhost:59640/MSSQLService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MSSQLService.wsdl" MetadataType="Wsdl" ID="e188030e-9bdd-4192-bc9a-dfca58b1f2e2" SourceId="1" SourceUrl="http://localhost:59640/MSSQLService.svc?wsdl" />
-    <MetadataFile FileName="MSSQLService.xsd" MetadataType="Schema" ID="ab200bb9-e8db-4f90-8930-773e1a22ea50" SourceId="1" SourceUrl="http://localhost:59640/MSSQLService.svc?xsd=xsd0" />
-    <MetadataFile FileName="MSSQLService.disco" MetadataType="Disco" ID="373625ae-29e5-4486-ad90-c227decbd1c5" SourceId="1" SourceUrl="http://localhost:59640/MSSQLService.svc?disco" />
-    <MetadataFile FileName="MSSQLService1.xsd" MetadataType="Schema" ID="823df06c-b7d5-4480-aae0-a6a8e550c368" SourceId="1" SourceUrl="http://localhost:59640/MSSQLService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MSSQLService.wsdl" MetadataType="Wsdl" ID="bca7b504-7145-45e4-8526-2d75f9afe179" SourceId="1" SourceUrl="http://localhost:59640/MSSQLService.svc?wsdl" />
+    <MetadataFile FileName="MSSQLService.xsd" MetadataType="Schema" ID="3d0b650a-fbb4-4e29-89cb-f820869a885a" SourceId="1" SourceUrl="http://localhost:59640/MSSQLService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MSSQLService1.xsd" MetadataType="Schema" ID="bcbd81a4-50e5-4933-9165-4ab2a2853b8e" SourceId="1" SourceUrl="http://localhost:59640/MSSQLService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MSSQLService.disco" MetadataType="Disco" ID="2757d93f-0bff-4aff-a503-e0d906a819d6" SourceId="1" SourceUrl="http://localhost:59640/MSSQLService.svc?disco" />
+    <MetadataFile FileName="MSSQLService2.xsd" MetadataType="Schema" ID="36538ee1-52b6-4544-8e2b-1b7a9828a503" SourceId="1" SourceUrl="http://localhost:59640/MSSQLService.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
